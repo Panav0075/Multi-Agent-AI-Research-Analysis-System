@@ -1,0 +1,128 @@
+{
+  "request": "Should we prioritize reducing first-response time or improving self-service documentation coverage?",
+  "plan": {
+    "objective": "Should we prioritize reducing first-response time or improving self-service documentation coverage?",
+    "steps": [
+      "identify the decision or information requested",
+      "retrieve evidence from the available knowledge base",
+      "compare the evidence and identify important trade-offs",
+      "verify that the conclusion is supported by retrieved sources",
+      "write a concise source-backed response"
+    ],
+    "requires_research": true,
+    "requires_verification": true
+  },
+  "evidence": [
+    {
+      "source": "knowledge-base-study.md",
+      "title": "Knowledge Base Coverage Study",
+      "passage": "The documentation review found that 62 percent of the twenty highest-volume support questions had a complete self-service article. Eight high-volume issue categories either had outdated instructions or no dedicated article.\n\nWhen customers viewed a complete troubleshooting article before opening a ticket, 34 percent did not continue to ticket creation. For customers who still contacted support after reading an article, the initial ticket contained more diagnostic information and required fewer clarification messages.\n\nThe study recommends improving articles for the highest-volume repeatable issues before expanding documentation into low-frequency edge cases.",
+      "score": 0.156811
+    },
+    {
+      "source": "support-metrics.md",
+      "title": "Support Operations Metrics",
+      "passage": "During the latest eight-week review, the support team handled an average of 4,800 tickets per month. Median first-response time was 42 minutes, compared with the current SLA target of 60 minutes.\n\nBilling questions, password-reset questions, and API configuration questions represented 46 percent of incoming tickets. Categories with complete troubleshooting articles had a 21 percent lower repeat-contact rate than categories without maintained documentation.\n\nEscalated engineering tickets had a median resolution time of 19 hours. Reducing unnecessary escalations is therefore more valuable than reducing a few minutes from already compliant first-response performance.",
+      "score": 0.146214
+    },
+    {
+      "source": "sla-policy.md",
+      "title": "Customer Support SLA Policy",
+      "passage": "The current operating target for standard-priority tickets is a first response within 60 minutes during supported hours. High-priority production incidents have a 15-minute first-response target.\n\nThe SLA is measured on median performance and breach rate. Teams should not optimize median response time alone if doing so reduces investigation quality or increases repeat contacts.\n\nOperational reviews should prioritize SLA breaches, unresolved customer impact, and repeatable sources of ticket volume.",
+      "score": 0.117329
+    },
+    {
+      "source": "customer-feedback.md",
+      "title": "Customer Feedback Summary",
+      "passage": "Quarterly feedback showed that customers valued accurate answers and avoiding repeated explanations more than receiving an immediate but incomplete response.\n\nThe most common documentation complaint was difficulty finding current setup instructions. Customers specifically mentioned API authentication, webhook troubleshooting, and workspace permissions.\n\nEnterprise customers also requested clearer escalation ownership when an issue moved from support to engineering.",
+      "score": 0.038511
+    }
+  ],
+  "findings": [
+    "The documentation review found that 62 percent of the twenty highest-volume support questions had a complete self-service article. [knowledge-base-study.md]",
+    "Eight high-volume issue categories either had outdated instructions or no dedicated article. [knowledge-base-study.md]",
+    "During the latest eight-week review, the support team handled an average of 4,800 tickets per month. [support-metrics.md]",
+    "Median first-response time was 42 minutes, compared with the current SLA target of 60 minutes. [support-metrics.md]",
+    "The current operating target for standard-priority tickets is a first response within 60 minutes during supported hours. [sla-policy.md]",
+    "High-priority production incidents have a 15-minute first-response target. [sla-policy.md]",
+    "Quarterly feedback showed that customers valued accurate answers and avoiding repeated explanations more than receiving an immediate but incomplete response. [customer-feedback.md]",
+    "The most common documentation complaint was difficulty finding current setup instructions. [customer-feedback.md]"
+  ],
+  "recommendation": "Prioritize self-service documentation coverage first while continuing to monitor first-response time.",
+  "critique": {
+    "approved": true,
+    "reasons": [],
+    "research_query": ""
+  },
+  "final_answer": "Recommendation\n\nPrioritize self-service documentation coverage first while continuing to monitor first-response time.\n\nKey findings\n- The documentation review found that 62 percent of the twenty highest-volume support questions had a complete self-service article. [knowledge-base-study.md]\n- Eight high-volume issue categories either had outdated instructions or no dedicated article. [knowledge-base-study.md]\n- During the latest eight-week review, the support team handled an average of 4,800 tickets per month. [support-metrics.md]\n- Median first-response time was 42 minutes, compared with the current SLA target of 60 minutes. [support-metrics.md]\n\nSources\n- knowledge-base-study.md\n- support-metrics.md\n- sla-policy.md\n- customer-feedback.md",
+  "retry_count": 0,
+  "trace": [
+    {
+      "agent": "orchestrator",
+      "status": "started",
+      "summary": "Started multi-agent workflow",
+      "details": {}
+    },
+    {
+      "agent": "planner",
+      "status": "completed",
+      "summary": "Created a 5-step task plan",
+      "details": {
+        "steps": [
+          "identify the decision or information requested",
+          "retrieve evidence from the available knowledge base",
+          "compare the evidence and identify important trade-offs",
+          "verify that the conclusion is supported by retrieved sources",
+          "write a concise source-backed response"
+        ]
+      }
+    },
+    {
+      "agent": "researcher",
+      "status": "completed",
+      "summary": "Retrieved 4 evidence passages",
+      "details": {
+        "sources": [
+          "knowledge-base-study.md",
+          "support-metrics.md",
+          "sla-policy.md",
+          "customer-feedback.md"
+        ]
+      }
+    },
+    {
+      "agent": "analyst",
+      "status": "completed",
+      "summary": "Produced 8 findings",
+      "details": {
+        "recommendation": "Prioritize self-service documentation coverage first while continuing to monitor first-response time."
+      }
+    },
+    {
+      "agent": "critic",
+      "status": "approved",
+      "summary": "Evidence and analysis passed verification",
+      "details": {
+        "approved": true,
+        "reasons": [],
+        "research_query": ""
+      }
+    },
+    {
+      "agent": "writer",
+      "status": "completed",
+      "summary": "Created the final source-backed response",
+      "details": {
+        "answer_length": 748
+      }
+    },
+    {
+      "agent": "orchestrator",
+      "status": "completed",
+      "summary": "Workflow completed",
+      "details": {
+        "checkpoints": 4
+      }
+    }
+  ]
+}

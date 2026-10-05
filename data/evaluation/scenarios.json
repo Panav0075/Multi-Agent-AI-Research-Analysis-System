@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Support improvement priority",
+    "request": "Should we prioritize reducing first-response time or improving self-service documentation coverage?",
+    "expected_sources": [
+      "support-metrics.md",
+      "knowledge-base-study.md",
+      "sla-policy.md"
+    ],
+    "required_facts": [
+      "self-service documentation",
+      "repeat-contact",
+      "sla target"
+    ]
+  },
+  {
+    "name": "Onboarding automation",
+    "request": "Which parts of customer onboarding should we automate first, and which should remain with people?",
+    "expected_sources": [
+      "onboarding-analysis.md"
+    ],
+    "required_facts": [
+      "repetitive",
+      "human"
+    ]
+  },
+  {
+    "name": "Support automation expansion",
+    "request": "Where should we expand support automation without creating unnecessary risk?",
+    "expected_sources": [
+      "automation-study.md"
+    ],
+    "required_facts": [
+      "low-risk",
+      "human"
+    ]
+  },
+  {
+    "name": "Documentation investment",
+    "request": "Is there evidence that improving troubleshooting documentation can reduce support workload?",
+    "expected_sources": [
+      "knowledge-base-study.md",
+      "support-metrics.md"
+    ],
+    "required_facts": [
+      "34 percent",
+      "21 percent"
+    ]
+  }
+]

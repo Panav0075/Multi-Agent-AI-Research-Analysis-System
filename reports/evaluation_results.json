@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "source_recall": 1.0,
+    "fact_coverage": 0.5417,
+    "workflow_completed": 1.0,
+    "critic_approved": 1.0
+  },
+  "examples": [
+    {
+      "name": "Support improvement priority",
+      "request": "Should we prioritize reducing first-response time or improving self-service documentation coverage?",
+      "metrics": {
+        "source_recall": 1.0,
+        "fact_coverage": 0.6667,
+        "workflow_completed": 1.0,
+        "critic_approved": 1.0
+      },
+      "sources": [
+        "knowledge-base-study.md",
+        "support-metrics.md",
+        "sla-policy.md",
+        "customer-feedback.md"
+      ],
+      "final_answer": "Recommendation\n\nPrioritize self-service documentation coverage first while continuing to monitor first-response time.\n\nKey findings\n- The documentation review found that 62 percent of the twenty highest-volume support questions had a complete self-service article. [knowledge-base-study.md]\n- Eight high-volume issue categories either had outdated instructions or no dedicated article. [knowledge-base-study.md]\n- During the latest eight-week review, the support team handled an average of 4,800 tickets per month. [support-metrics.md]\n- Median first-response time was 42 minutes, compared with the current SLA target of 60 minutes. [support-metrics.md]\n\nSources\n- knowledge-base-study.md\n- support-metrics.md\n- sla-policy.md\n- customer-feedback.md"
+    },
+    {
+      "name": "Onboarding automation",
+      "request": "Which parts of customer onboarding should we automate first, and which should remain with people?",
+      "metrics": {
+        "source_recall": 1.0,
+        "fact_coverage": 1.0,
+        "workflow_completed": 1.0,
+        "critic_approved": 1.0
+      },
+      "sources": [
+        "onboarding-analysis.md",
+        "sla-policy.md",
+        "automation-study.md",
+        "support-metrics.md"
+      ],
+      "final_answer": "Recommendation\n\nPrioritize automation for repetitive onboarding steps, while keeping human review for exceptions and access decisions.\n\nKey findings\n- A review of 320 customer onboarding workflows found that account provisioning, standard workspace configuration, and welcome-email preparation were highly repetitive. [onboarding-analysis.md]\n- Together these activities consumed approximately 28 percent of onboarding specialist time. [onboarding-analysis.md]\n- The current operating target for standard-priority tickets is a first response within 60 minutes during supported hours. [sla-policy.md]\n- High-priority production incidents have a 15-minute first-response target. [sla-policy.md]\n\nSources\n- onboarding-analysis.md\n- sla-policy.md\n- automation-study.md\n- support-metrics.md"
+    },
+    {
+      "name": "Support automation expansion",
+      "request": "Where should we expand support automation without creating unnecessary risk?",
+      "metrics": {
+        "source_recall": 1.0,
+        "fact_coverage": 0.5,
+        "workflow_completed": 1.0,
+        "critic_approved": 1.0
+      },
+      "sources": [
+        "automation-study.md",
+        "support-metrics.md",
+        "knowledge-base-study.md",
+        "customer-feedback.md"
+      ],
+      "final_answer": "Recommendation\n\nStart with high-volume, low-risk support categories where the available evidence shows repeatable resolution patterns.\n\nKey findings\n- The automation pilot focused on password resets, invoice-copy requests, and basic account-status questions. [automation-study.md]\n- These categories had clear resolution rules and low operational risk. [automation-study.md]\n- During the latest eight-week review, the support team handled an average of 4,800 tickets per month. [support-metrics.md]\n- Median first-response time was 42 minutes, compared with the current SLA target of 60 minutes. [support-metrics.md]\n\nSources\n- automation-study.md\n- support-metrics.md\n- knowledge-base-study.md\n- customer-feedback.md"
+    },
+    {
+      "name": "Documentation investment",
+      "request": "Is there evidence that improving troubleshooting documentation can reduce support workload?",
+      "metrics": {
+        "source_recall": 1.0,
+        "fact_coverage": 0.0,
+        "workflow_completed": 1.0,
+        "critic_approved": 1.0
+      },
+      "sources": [
+        "knowledge-base-study.md",
+        "customer-feedback.md",
+        "support-metrics.md",
+        "sla-policy.md"
+      ],
+      "final_answer": "Recommendation\n\nUse the highest-ranked evidence as the basis for the decision, and validate the recommendation against the cited sources.\n\nKey findings\n- The documentation review found that 62 percent of the twenty highest-volume support questions had a complete self-service article. [knowledge-base-study.md]\n- Eight high-volume issue categories either had outdated instructions or no dedicated article. [knowledge-base-study.md]\n- Quarterly feedback showed that customers valued accurate answers and avoiding repeated explanations more than receiving an immediate but incomplete response. [customer-feedback.md]\n- The most common documentation complaint was difficulty finding current setup instructions. [customer-feedback.md]\n\nSources\n- knowledge-base-study.md\n- customer-feedback.md\n- support-metrics.md\n- sla-policy.md"
+    }
+  ]
+}

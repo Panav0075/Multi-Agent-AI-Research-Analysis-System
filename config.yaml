@@ -1,0 +1,11 @@
+knowledge:
+  path: data/knowledge
+  top_k: 4
+
+workflow:
+  max_retries: 1
+
+evaluation:
+  scenarios_path: data/evaluation/scenarios.json
+  results_path: reports/evaluation_results.json
+  report_path: reports/agent_evaluation.md
