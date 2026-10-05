@@ -12,10 +12,6 @@ Instead of asking one large agent to research, analyze, verify, and write everyt
 
 A central orchestrator manages the workflow, shared state, execution order, retries, and trace logging.
 
-The repository runs locally without an LLM API key. The agent interfaces are intentionally separated from the local reasoning implementation so an external LLM can be added later without redesigning the workflow.
-
-> The knowledge base and evaluation scenarios included here are synthetic portfolio data. They do not contain customer information, proprietary company documents, or private production data.
-
 ---
 
 ## Why build this as multiple agents?
@@ -699,19 +695,3 @@ Concepts demonstrated:
 **Multi-Agent Systems · Agent Orchestration · Tool Use · Shared State · Agent Memory · Retrieval · Planning · Verification · Guardrails · Execution Tracing · Agent Evaluation**
 
 ---
-
-# Future improvements
-
-- integrate LangGraph for state-machine orchestration;
-- add real LLM-backed agents;
-- add MCP tools;
-- add vector database retrieval;
-- implement persistent conversation memory;
-- add human-in-the-loop approval;
-- support parallel research agents;
-- add FastAPI endpoints;
-- containerize with Docker;
-- add OpenTelemetry traces;
-- add token/cost accounting;
-- add agent-level latency metrics;
-- evaluate model-based critic scoring.
